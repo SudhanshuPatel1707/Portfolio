@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root
+{
+    --bgOrange: rgb(224, 125, 103);
+}
+.wrapper{
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.container
+{
+    width: 1200px;
+    margin: auto;
+}
+
+.navBar
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-Items
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo 
+{
+    width: 80px;
+}
+
+.logo-Items p 
+{
+    margin-left: -1.2rem;
+    font-size: 28px;
+}
+
+.nav-Items div a
+{
+    font-size: 20px;
+    font-weight: 100;
+    text-decoration: none;
+    color: black;
+}
+
+.nav-Items
+{
+    display: flex;
+    column-gap: 2rem;
+    padding: 0 4em;
+}
+
+.nav-Items div a:hover
+{
+    transition: font-weight 0.5s;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.HeroSection
+{
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 5rem;
+    margin: 4rem auto;
+    padding: 0 1rem;
+    padding-bottom: 8rem;
+}
+
+.HeroSection .Watermark
+{
+    /* to control the accessibilty of the text at the user-interface --- use user-select: */
+    /* to make text inaccessible */
+    user-select: none;
+    font-size: 7em;
+    flex: 1 1 auto;
+    color: rgb(231, 231, 231);
+    font-weight: bold;
+
+    position:relative;
+    bottom: -16%;
+    left:-5%
+}
+
+.HeroSection-left
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.HeroSection-left .Heading
+{
+    font-size: 35px;
+    color: #343d68;
+    font-weight: 500;
+}
+
+.HeroSection-left .subHeading
+{
+    font-size: 45px;
+    line-height: 45px;
+}
+
+.HeroSection-left .Description
+{
+    margin-top: 1rem;
+    width: 70%;
+    font-weight: 500;
+}
+
