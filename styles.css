@@ -10,8 +10,9 @@
 
 :root
 {
-    --bgOrange: rgb(224, 125, 103);
+    --bgOrange: rgb(213, 78, 70);
 }
+
 .wrapper{
     width: 100vw;
     overflow-x: hidden;
@@ -112,14 +113,33 @@
 
 .HeroSection-left .subHeading
 {
+    margin-top: 2rem;
     font-size: 45px;
     line-height: 45px;
 }
 
 .HeroSection-left .Description
 {
-    margin-top: 1rem;
+    margin-top: 2.5rem;
     width: 70%;
     font-weight: 500;
 }
 
+.HeroSection-left .button
+{
+    width: fit-content;
+    background-color: var(--bgOrange);
+    color: white;
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+    font-size: larger;
+    border: 1px solid black;
+    position: relative;
+}
+
+.HeroSection-left .button::before
+{
+    content: "";
+    border: 1px solid black;
+    padding: 1rem 0rem;
+}
