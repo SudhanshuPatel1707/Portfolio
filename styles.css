@@ -72,3 +72,243 @@
     cursor: pointer;
 }
 
+.HeroSection
+{
+    position: relative;
+    display: flex;
+
+    /* Centering the content */
+    justify-content: center;
+    align-items: center;
+}
+
+.faded-text
+{
+    position: absolute;
+    user-select: none;
+    font-size: 7em;
+    color: rgb(231, 231, 231);
+    bottom: -16%;
+    left: -5%;
+    font-weight: bold;
+}
+
+.HeroSection-Left
+{
+    margin: 4rem auto;
+    gap: 2rem;
+    padding: 0 1rem;
+    padding-bottom: 8rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.HeroSection-heading
+{
+    font-size: 35px;
+    color: #343d68;
+    font-weight: 500;
+}
+
+.HeroSection-subheading
+{
+    font-size: 45px;
+    line-height: 45px;
+}
+
+.role
+{
+    color: #4e45d5;
+    font-weight: 800;
+}
+
+.HeroSection-description
+{
+    margin-top: 1rem;
+    width: 70%;
+    font-weight: 500;
+}
+
+.Button
+{
+    border: 0.2rem solid  #e84949;
+    padding: 0.8rem 2.3rem;
+    margin-right: auto;
+    background-color: #e84949;
+    color: white;
+    position: relative;
+    z-index: 1;
+    font-size: 18px;
+
+    /* Adding box-shadow */
+    box-shadow: 5px 5px 7px 0px #0000003f;
+    transition: color 2sec;
+}
+
+.Button::before
+{
+    content: "";
+    position: absolute;
+    /* to span the button over the  */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    background-color: white;
+    z-index: -1;
+
+    /* adding sliding animation */
+    /* 1. The scale of the element along X-axis is 0 and upon hovering the .Button it scales up to 1 */
+    /* 2. The transformation originates from left ----> transform-origin: left*/
+
+    transform: scaleX(0);
+    transform-origin: left;
+    will-change: scaleX;
+    transition: transform 0.8s;
+}
+
+/* 3. Upon hovering the .Button transformation should occur the first child/ before child */
+.Button:hover::before
+{
+    transform: scaleX(1);
+}
+
+.Button:hover
+{
+    color: #e84949;
+}
+
+.HeroSection-Right
+{
+    position: relative;
+}
+
+.absolute
+{
+    position: absolute;
+}
+
+@keyframes grow-shrink {
+    from
+    {
+        filter: grayscale(0);
+        /* scale(1) ---> magnification of the image = 1*/
+        transform: scale(1); 
+        box-shadow: 6px 6px 7px 0px #0000003f;
+    }
+    to
+    {
+        filter: grayscale(1);
+        transform: scale(1.2);
+    }
+}
+
+.userImage
+{
+    padding: 2.5rem;
+    animation: grow-shrink 1.8s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    to
+    {
+        left: 5%;
+    }
+}
+
+.circle
+{
+    z-index: 1;
+    left: 0;
+    bottom: 0;
+
+    animation: shake 1.8s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes ziggy {
+    to
+    {
+        top: 2%;
+        left: 5%;
+    }
+}
+
+.zigzags
+{
+    z-index: 1;
+    top: 1.5em;
+    left: -0.3em;
+
+    animation: ziggy 1.8s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes bounce {
+    to 
+    {
+        transform: translateY(-15px);
+    }   
+}
+
+.dots
+{
+    z-index: 1;
+    bottom: -1rem;
+
+    right: 0;
+    animation: bounce 1.8s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes roll {
+    to 
+    {
+        transform: translateY(-12px) rotateY(180deg);
+    }
+}
+
+.cube 
+{
+    z-index: 1;
+
+    top: -0.8em;
+    right: 1em;
+
+    animation: roll 1.8s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes plusmove {
+    to
+    {
+        top: 3%;
+        left: 48%;
+    }
+}
+
+.plus
+{
+    z-index: 1;
+    top: -0.8rem;
+    left: 50%;
+
+    animation: plusmove 1.8s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
