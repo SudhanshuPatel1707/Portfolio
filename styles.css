@@ -133,9 +133,9 @@
 
 .Button
 {
+    max-width: fit-content;
     border: 0.2rem solid  #e84949;
     padding: 0.8rem 2.3rem;
-    margin-right: auto;
     background-color: #e84949;
     color: white;
     position: relative;
@@ -311,4 +311,260 @@
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+}
+
+.project-section
+{
+    background-color: rgb(231, 231, 231);
+    margin-top: 4rem;
+}
+
+.project-heading
+{
+    color: var(--bgOrange);
+    font-size: 90px;
+    text-align: center;
+}
+
+.projectContainer
+{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+
+    
+}
+
+.projectCards
+{
+    width: 90%;
+    height: 550px;
+    
+    position: relative;
+    box-shadow: 0px 0px 40px #1f1f1f;
+}
+
+/* Applying a black tint */
+
+.projectCards::after
+{
+    content: "";
+    background-color: #1f1f1f9a;
+    position: absolute;
+    z-index: 1;
+    /* stretching the tint across the card */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.projectCards::before
+{
+    content: "";
+    background-image: linear-gradient(45deg, #343d68, #343d68be, #343d687c);
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition-property: transform;
+    transition-duration: 0.4s;
+}
+
+.projectCards:hover::before
+{
+    transform: scaleX(1);
+}
+
+.projectCardsRight
+{
+    margin: 120px;
+}
+
+.projectNumber
+{
+    font-size: 200px;
+    font-weight: 600;
+    position: absolute;
+    z-index: 2;
+    color: white;
+    visibility: hidden;
+}
+
+.projectCards:hover .projectNumber
+{
+    visibility: visible;
+}
+.projectNumber-right
+{
+    top: -45px;
+    right: -40px;
+}
+
+.projectNumber-left
+{
+    top: -45px;
+    left: -40px;
+}
+
+.projectContent 
+{
+    color: white;
+    gap: 1em;
+    padding: 2em;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    position: absolute;
+    z-index: 2;
+
+    transform: scale(1);
+    transition-property: transform;
+    transition-duration: 0.4s;
+}
+
+.projectCards:hover .projectContent
+{
+    transform: scale(1.1);
+} 
+.projectContent-left
+{
+    position: absolute;
+    left: 10%;
+    bottom: 20%;
+}
+
+.projectContent-right
+{
+    position: absolute;
+    right: 10%;
+    bottom: 20%;
+}
+
+.project-skill-container
+{
+    display: flex;
+    gap: 10px;
+}
+
+.project-subheading
+{
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 3rem;
+}
+
+.btn-grp
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-grp .Button
+{
+    border: 0px;
+    cursor: pointer;
+}
+
+.project-one
+{
+    background-image: url(./addons/Project1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.project-two
+{
+    background-image: url(./addons/Project2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.project-three
+{
+    background-image: url(./addons/Project3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.project-four
+{
+    background-image: url(./addons/Project4.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Adding media queries */
+
+@media screen and (max-width:1300px)
+{
+    .project-heading
+    {
+        padding-top: 30px;
+        color: var(--bgOrange);
+        text-align: center;
+        font-size: 40px;
+    }
+    .projectContainer
+    {
+        padding: 5px;
+        margin: 10px;
+        gap: 60px;
+    }
+    .projectCards
+    {
+        width: 100%;
+        height: 300px;
+        background-size: cover;
+        background-position: center;
+    }
+    .projectContent
+    {
+        scale: 0.5;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+    .projectContent-left
+    {
+        left: 0;
+    }
+    .project-subheading
+    {
+        width: 100%;
+    }
+    .project-two 
+    {
+        margin-left: 0;
+    }
+    .project-four
+    {
+        margin-left: 0;
+    }
+    .project-skill
+    {
+        width: 35px;
+    }
+
+    .projectCards:hover .projectNumber
+    {
+        display: none;
+    }
+
+    .projectCards:hover .projectContent
+    {
+        scale: 0.55;
+    }
+
 }
