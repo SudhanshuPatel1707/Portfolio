@@ -504,6 +504,100 @@
     background-repeat: no-repeat;
 }
 
+.skills-container
+{
+    padding: 5rem;
+    margin: 10rem auto;
+    display: flex;
+    position: relative;
+    gap: 2em;
+}
+
+.skills-faded-text
+{
+    position: absolute;
+    font-size: 15em;
+    font-style: bold;
+    color: rgb(231, 231, 231);
+    bottom: -34.5%;
+    right: -25%;
+}
+
+.skills-container-left
+{
+    width: 50%;
+}
+
+.skills-container-right
+{
+    width: 50%;
+}
+
+.skills-container-left p
+{
+    margin-top: 1em;
+    width: 100%;
+    text-align: justify;
+}
+
+.skills-heading
+{
+    font-size: 50px;
+    font-style: bold;
+    color: var(--bgOrange);
+    line-height: 50px;
+}
+
+.caps
+{
+    font-size: 90px;
+}
+
+.skills-container-right
+{
+    
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.1em;
+}
+
+@keyframes blobAnimate {
+    from
+    {
+        transform: translateX(0) translateY(0);
+    }
+
+    to
+    {
+        transform: translateX(4%) translateY(-6%);
+    }
+}
+
+.blob-style
+{
+    position: absolute;
+    z-index: -1;
+    animation: blobAnimate 2000ms;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+.skills-icons
+{
+    width: 75px;
+    transform: scale(1);
+    transition-property: transform;
+    transition-duration: 0.4s;
+}
+
+.skills-icons:hover
+{
+    transform: scale(1.2);
+}
 /* Adding media queries */
 
 @media screen and (max-width:1300px)
