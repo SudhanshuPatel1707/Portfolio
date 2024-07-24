@@ -313,6 +313,34 @@
     animation-direction: alternate;
 }
 
+@media (max-width:1300px) {
+    .HeroSection {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-top: -1rem;
+        padding-bottom: 3rem;
+    }
+    .HeroSection-description {
+        text-align: center;
+        margin: auto;
+    }
+    .faded-text {
+        display: none;
+    }
+    #btn-top {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .HeroSection-Right {
+        margin-top: -7em;
+        scale: 0.8;
+    }
+
+}
+  /* Hero section end */
+
 .project-section
 {
     background-color: rgb(231, 231, 231);
@@ -478,28 +506,28 @@
 
 .project-one
 {
-    background-image: url(./addons/Project1.png);
+    background-image: url(./addons/wallpaperflare.com_wallpaper.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .project-two
 {
-    background-image: url(./addons/Project2.png);
+    background-image: url(./addons/a-evolucao-do-qr-code-para-pesquisas-de-satisfacao.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .project-three
 {
-    background-image: url(./addons/Project3.png);
+    background-image: url(./addons/wallpaperflare.com_wallpaper\ \(2\).jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .project-four
 {
-    background-image: url(./addons/Project4.png);
+    background-image: url(./addons/wallpaperflare.com_wallpaper\ \(1\).jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -599,76 +627,39 @@
     transform: scale(1.2);
 }
 
-.contactMe-section
-{
-    width: 100%;
-    background-color: rgb(231, 231, 231);
+@media (max-width: 1300px) {
+    .skills-container {
+      margin: 0;
+      padding: 2em;
+      flex-direction: column;
+    }
+    .skills-heading {
+      font-size: 40px;
+      font: bold;
+    }
+    .caps {
+      font-size: 60px;
+    }
+    .skills-container-left {
+      width: 100%;
+    }
+    .skills-container-right {
+      width: 100%;
+    }
+    .skills-icons {
+      width: 50px;
+    }
+    .skills-faded-text {
+      display: none;
+    }
+    .skills-subHeading {
+      width: 100%;
+    }
+    .skills-heading::after {
+      bottom: 9%;
+    }
 }
 
-.contactMe-heading
-{
-    font-size: 3em;
-    color: var(--bgOrange);
-    padding-top: 2rem;
-}
-
-.contactMe-subheading
-{
-    font-size: 2rem;
-    color: #343d68aa;
-}
-
-.contactMe-form-container
-{
-    margin-top: 25px;
-}
-
-form
-{
-    width: 70%;
-    margin: 2rem 5rem;
-    gap: 30px;
-}
-
-.formfield
-{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 42px;
-    padding: 0 2rem;
-    font-size: 18px;
-    border-radius: 5px;
-    box-shadow: 2px 2px 10px #1f1f1f;
-    margin-top: 27px;
-    border: none;
-    margin: 27px;
-}
-
-.formfield-textarea
-{
-    padding-top: 1rem;
-    height: auto;
-}
-
-.submit-button
-{
-    border: none;
-    font-size: 1.4rem;
-    margin: 1rem 0;
-    transform: scale(1);
-    transition: transform 0.6s;
-}
-
-.submit-button:hover
-{
-    transform: scale(0.9);
-}
-
-.submit-icon
-{
-    padding: 0 1rem;
-}
 /* Adding media queries */
 
 @media screen and (max-width:1300px)
@@ -733,3 +724,147 @@ form
     }
 
 }
+/* Contact Us Start */
+.contactus-container {
+    width: 100%;
+    background-color: rgb(231, 231, 231);
+  }
+  .contactus-heading {
+    padding-top: 2rem;
+    font-size: 5em;
+    color: var(--bgOrange);
+  }
+  .contactus-sub-heading {
+    font-size: 3rem;
+    text-transform: capitalize;
+    color: #343d68aa;
+  }
+  .contactus-form-container {
+    display: flex;
+    margin-top: 25px;
+    justify-content: center;
+    align-items: center;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 70%;
+    margin: 2rem 5rem;
+  }
+  .formfield-container {
+    width: 100%;
+  }
+  .formfield {
+    width: 100%;
+    height: 42px;
+    padding: 0 2rem;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px #1f1f1f;
+    background: #ffffff97;
+    font-weight: 500;
+  }
+  .formfield:focus {
+    border: none;
+  }
+  .formfield-textarea {
+    height: auto;
+    padding-top: 1rem;
+  }
+  #submit-btn {
+    border: none;
+    font-size: 1.4rem;
+    margin: 1rem 0;
+  }
+  #submit-btn:hover {
+    scale: 0.9;
+  }
+  .submit-icon {
+    padding: 0 1rem;
+    font-size: 1.5rem;
+  }
+  @media (max-width: 1300px) {
+    .contactus-heading {
+      font-size: 40px;
+      text-align: center;
+      padding: 15px 10px;
+    }
+    .contactus-sub-heading {
+      font-size: 20px;
+      padding: 0 10px;
+      text-align: center;
+    }
+    .form {
+      width: 100%;
+      margin: 0;
+      align-items: center;
+    }
+    .formfield-container {
+      display: flex;
+      align-items: center;
+      width: 90%;
+    }
+    .formfield {
+      width: 90%;
+    }
+}
+  /* Contact Us End */
+
+footer{
+    position:relative;
+    margin-top:-1px;
+    background-color: #343d68;
+    padding:5rem;
+}
+  
+.footer-wrapper{
+    display:flex;
+    gap:1rem;
+    padding:1.2rem;
+    justify-content: space-between;
+    align-items:center;
+}
+  
+.footer-faded-text{
+position:absolute;
+left:0;
+bottom:0;color:#535c87;
+user-select:none;
+font-size:5em;
+}
+
+.link-wrapper{
+display:flex;
+gap:1.2rem;
+}
+  
+.link-wrapper div a{
+color:white;
+text-decoration:none;
+transition:all 0.6s;
+}
+
+.link-wrapper div a:hover{
+color:var(--bgOrange);
+}
+
+.icon-wrapper{
+display:flex;
+gap:1rem;
+}
+
+@media (max-width: 1300px) {
+    footer {
+      padding: 0.5rem;
+    }
+    .footer-wrapper {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .footer-faded-text {
+      display: none;
+    }
+}
+  /* Footer End */
